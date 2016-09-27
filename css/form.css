@@ -1,0 +1,11 @@
+.flex-container{
+    
+    display:flex;
+    flex-direction:row;
+    border:1px solid gray;
+    //height:650px;
+    width:1200px;
+    margin:auto;
+    background-color:red;
+    
+}

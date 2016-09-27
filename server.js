@@ -26,16 +26,16 @@ app.use(connection(mysql,{
     host        : 'localhost',
     user        : 'root',
     password    : 'root',
-    database    : 'shopping_cart'
+    database    : 'uiproject'
 },'request'));
 
 //Routing
 //this is routing but to connect the rest API with our database
-app.get( "/service/inventory",function(req, res, next){
+app.get( "/service/person",function(req, res, next){
     //arrays to store dynamic parameters
     var ids =[];
 
-    var query = "SELECT * FROM inventory";
+    var query = "SELECT * FROM person";
     req.getConnection(function(err, connection){
         if(err) return next(err);
 
@@ -53,13 +53,13 @@ app.get( "/service/inventory",function(req, res, next){
 
 
 });
-app.get( "/service/inventory/:inventorytype_id",function(req, res, next){
+app.get( "/service/person/:personId",function(req, res, next){
     //arrays to store dynamic parameters
     var ids =[];
     var inventorytype_id=req.params.inventorytype_id;
     ids.push(inventorytype_id);
 
-    var query = "SELECT * FROM inventory WHERE inventorytype_id = ?";
+    var query = "SELECT * FROM person WHERE personId = ?";
     req.getConnection(function(err, connection){
         if(err) return next(err);
 
@@ -77,52 +77,16 @@ app.get( "/service/inventory/:inventorytype_id",function(req, res, next){
 
 });
 
-app.get( "/service/inventory_type",function(req, res, next){
-    //arrays to store dynamic parameters
-    var ids =[];
-
-    var query = "SELECT * FROM inventory_type";
-    req.getConnection(function(err, connection){
-        if(err) return next(err);
-
-        connection.query(query, ids, function(err, results){
-            if(err){
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
-            res.json(results);
-
-        });
 
 
-    });
 
 
-});
-
-app.get( "/service/inventory_type/:id",function(req, res, next){
-    //arrays to store dynamic parameters
-    var ids =[];
-    var id=req.params.id;
-    ids.push(id);
-
-    var query = "SELECT * FROM inventory_type WHERE id = ?";
-    req.getConnection(function(err, connection){
-        if(err) return next(err);
-
-        connection.query(query, ids, function(err, results){
-            if(err){
-                console.log(err);
-                return next("Mysql error, check your query");
-            }
-            res.json(results);
-
-        });
 
 
-    });
 
-});
+
+
+
 
 
 app.get( "/service/customer/:customer_id",function(req, res, next){
@@ -318,7 +282,7 @@ app.get('/game', function(req, res){
 //End of routing
 
 //launching application on localhost.
-app.listen(8180, function(){
-    console.log('server loaded on port 8180');
+app.listen(8181, function(){
+    console.log('server loaded on port 8181');
 
 });
