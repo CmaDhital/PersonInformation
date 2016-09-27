@@ -6,9 +6,15 @@
     height:650px;
     width:1200px;
     margin:auto;
-    background-color:red;
+    background-color:pink;
     
 }
+
+.error-msg
+{
+    color: red;
+}
+
 
 .personbox{
 
@@ -35,3 +41,10 @@
         width:150px;
         
     }
+
+
+.fieldset
+{
+    width:600;
+    margin: auto;
+}

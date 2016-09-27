@@ -7,12 +7,17 @@
         
     </head>
     
-    <body ng-controller="appCtrl">
+    <body>
         
      <div class="flex-container">
-       <person-dir></person-dir>
-         <form-dir></form-dir>
+         <div ng-controller="appCtrl">
          
+       <person-dir></person-dir>
+         
+             </div>
+         <div ng-controller="formCtrl">
+         <form-dir></form-dir>
+         </div>
          
         
         </div>   
