@@ -1,0 +1,78 @@
+<form method="post" name="myForm" novalidate>
+    
+    <fieldset>
+        
+        <legend>Register Person</legend>
+        
+        First Name <input type=text" placeholder="Enter First Name" id="txtFirst" name="first" ng-model="first" required>
+        <span class="error-msg" ng-show="myForm.first.$dirty&&myForm.first.$invalid"></span>
+            <span ng-show="myForm.first.$invalid">Enter first Name</span>
+        <br>
+            
+        Last Name <input type=text" placeholder="Enter Last Name" id="txtLast" name="last" ng-model="last" required>
+        <span class="error-msg" ng-show="myForm.last.$dirty && myForm.last.$invalid"></span>
+            <span ng-show="myForm.last.$error.required">Enter Last Name</span>
+        <br>
+        
+        Address <input type="text" placeholder="Enter Address" id="txtAddress" name="address" ng-model="address" required>
+        <span class="error-msg" ng-show="myForm.address.$dirty&&myForm.address.$invalid"></span>
+        <span ng-show="myForm.address.$error.required">Enter Address</span>
+        <br>
+        
+        Phone Number <input type="text" placeholder="Enter Phone Number" id="txtphone" name="phone" ng-model="address" required>
+        <span class="error-msg" ng-show="myForm.phone.$dirty&&myForm.phone.$invalid"></span>
+        <span ng-show="myForm.phone.$error.required">Enter Phone Number</span>
+        <br>
+    
+    
+
+        <button type="submit" ng-disabled="myForm.first.$dirty&&myForm.first.$invalid||myForm.last.$dirty && myForm.last.$invalid||myForm.email.$dirty && myForm.email.$invalid">Submit</button>
+
+    </fieldset>
+    
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="email" id="txtEmail" placeholder="Enter email" name="email" ng-model="email" required>
+        <span class="error-msg" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+            <span ng-show="myForm.email.$error.required">Enter Email</span>
+            <span ng-show="myForm.email.$error.email">Please enter valid email</span>
+        </span><br>
+-->

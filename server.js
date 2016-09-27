@@ -266,8 +266,8 @@ app.get('/landing', function(req, res){
     res.send('In landing page');
 
 });
-app.get('/home', function(req, res){
-    res.redirect('/views/home.html');
+app.get('/form', function(req, res){
+    res.redirect('/views/form.html');
 
 });
 app.get('/electronics', function(req, res){
