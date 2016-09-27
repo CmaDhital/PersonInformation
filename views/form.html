@@ -7,7 +7,7 @@
         <tr><td>First Name </td>
             <td><input type=text" placeholder="Enter First Name" id="txtFirst" name="first" ng-model="first" required>
                 <span class="error-msg" ng-show="myForm.first.$dirty&&myForm.first.$invalid"></span>
-                <span ng-show="myForm.first.$invalid">Enter first Name</span>
+                <span class="error-msg" ng-show="myForm.first.$invalid">Enter first Name</span>
             </td>
         </tr>
         <br>
@@ -16,7 +16,7 @@
         <tr><td>Last Name </td>
             <td><input type=text" placeholder="Enter Last Name" id="txtLast" name="last" ng-model="last" required>
                 <span class="error-msg" ng-show="myForm.last.$dirty && myForm.last.$invalid"></span>
-                <span ng-show="myForm.last.$error.required">Enter Last Name</span>
+                <span class="error-msg" ng-show="myForm.last.$error.required">Enter Last Name</span>
             </td>
         </tr>
         <br>
@@ -24,7 +24,7 @@
         <tr><td>Address </td>
             <td><input type="text" placeholder="Enter Address" id="txtAddress" name="address" ng-model="address" required>
                 <span class="error-msg" ng-show="myForm.address.$dirty&&myForm.address.$invalid"></span>
-                <span ng-show="myForm.address.$error.required">Enter Address</span>
+                <span class="error-msg" ng-show="myForm.address.$error.required">Enter Address</span>
             </td>
         </tr>
         <br>
@@ -33,14 +33,14 @@
         <tr><td>Phone Number </td>
             <td><input type="text" placeholder="Enter Phone Number" id="txtphone" name="phone" ng-model="phone" required>
             <span class="error-msg" ng-show="myForm.phone.$dirty&&myForm.phone.$invalid"></span>
-            <span ng-show="myForm.phone.$error.required">Enter Phone Number</span>
+            <span class="error-msg" ng-show="myForm.phone.$error.required">Enter Phone Number</span>
             </td>
         </tr>
         <br>
     
     
 
-        <button type="submit" ng-disabled="myForm.first.$dirty&&myForm.first.$invalid||myForm.last.$dirty && myForm.last.$invalid||myForm.email.$dirty && myForm.email.$invalid">Submit</button>
+        <button class="button" type="submit" ng-disabled="myForm.first.$dirty&&myForm.first.$invalid||myForm.last.$dirty&&myForm.last.$invalid||myForm.address.$dirty&&myForm.address.$invalid||myForm.phone.$dirty&&myForm.phone.$invalid">Submit</button>
 
     </fieldset>
     
